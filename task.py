@@ -54,7 +54,7 @@ class NewsExtractionBot:
         """Function that creates the webdriver and navigates to the news site"""
 
         self.driver = Selenium()
-        self.driver.open_available_browser(url=self.site, maximized=True)
+        self.driver.open_chrome_browser(url=self.site, maximized=True)
 
     def search_news(self):
         """Function that searches for the news and applies the applicable filters"""
