@@ -60,7 +60,7 @@ class NewsExtractionBot:
         """Function that searches for the news and applies the applicable filters"""
 
         # Search for the news phrase specified
-        search_button = self.driver.wait_until_element_is_visible("xpath://html/body/div[1]/div[2]/div[2]/header/section[1]/div[1]/div[2]/button")
+        search_button = self.driver.wait_until_element_is_visible("xpath://html/body/div[1]/div[2]/div[2]/header/section[1]/div[1]/div[2]/button", timeout=15)
         self.driver.click_element(search_button)
         self.driver.input_text("xpath://html/body/div[1]/div[2]/div[2]/header/section[1]/div[1]/div[2]/div/form/div/input", self.phrase)
         self.driver.click_element("xpath://html/body/div[1]/div[2]/div[2]/header/section[1]/div[1]/div[2]/div/form/button")
