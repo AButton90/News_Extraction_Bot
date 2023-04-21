@@ -21,7 +21,7 @@ class NewsExtractionBot:
         self.site = "https://www.nytimes.com/"
         self.phrase = os.getenv(key="PHRASE")
         self.category = os.getenv(key="CATEGORY")
-        self.period = os.getenv(key="PERIOD", cast=int)
+        self.period = int(os.getenv(key="PERIOD"))
         self.now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
         self.determine_date_filters()
